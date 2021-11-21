@@ -6,14 +6,35 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Understanding TypeScript</title>
   <script src="dist/bundle.js" defer></script>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="app.css">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js"></script>
+  <style>
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
+  <div class='above'>
+    <form>
+      <input type="text" id="address"/>
+      <button type="Submit">Search Address</button>
+    </form>
+  </div>
   <div id="map">
     <p>Please enter an adress</p>
   </div>
-  <form>
-    <input type="text" id="address"/>
-    <button type="Submit">Search Address</button>
-  </form>
 </body>
+<script>
+  //mapboxgl.accessToken = 'putApikey';
+  const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: //'mapbox://styles/mapbox/streets-v11', // style URL
+    center: [-74.5, 40], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+  });
+</script>
 </html>

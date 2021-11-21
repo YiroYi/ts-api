@@ -4,7 +4,6 @@ html {
 
 #map {
   width: 90%;
-  height: 20rem;
   border: 1px solid #ccc;
   margin: 2rem auto;
   display: flex;
@@ -14,6 +13,12 @@ html {
 }
 
 form {
+  height: 80%;
   text-align: center;
   margin: 2rem auto;
+  background-color: yellow;
+}
+
+.above {
+  height: 80%;
 }
